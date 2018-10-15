@@ -10,6 +10,7 @@ const TemplateWrapper = ({ children }) => (
       <meta charSet="utf-8" />
       <title>Mat Dupont</title>
       <link rel="canonical" href="https://www.matdupont.com" />
+      <html lang="en" />
     </Helmet>
     <Navbar />
     <div>{children}</div>
