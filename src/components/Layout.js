@@ -8,7 +8,7 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
       <meta charSet="utf-8" />
-      <meta name="Description" content="Mat Dupont's Personal Site">
+      <meta name="Description" content="Mat Dupont's Personal Site" />
       <title>Mat Dupont</title>
       <link rel="canonical" href="https://www.matdupont.com" />
       <html lang="en" />
