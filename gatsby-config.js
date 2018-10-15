@@ -4,7 +4,20 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          posts: require.resolve("./src/templates/blog-post.js"),
+          default: require.resolve("./src/components/default-page-layout.js"),
+        }
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
