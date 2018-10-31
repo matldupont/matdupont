@@ -15,6 +15,15 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Learning Enthusiast</h1>
             </div>
+            <div className="content">
+              <ul className="taglist">
+                <li>Developer.</li>
+                <li>Designer.</li>
+                <li>Woodworker.</li>
+                <li>Musician.</li>
+                <li>Grillmaster.</li>
+              </ul>
+            </div>
             
           </div>
         </section>
