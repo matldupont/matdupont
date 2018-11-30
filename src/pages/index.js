@@ -1,31 +1,73 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import styled from 'styled-components';
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Headshot from '../components/Headshot'
+
+const MainContainer = styled.div`
+  display:flex;
+  align-items: center;
+
+  /* @media only screen and (max-width: 769px) {
+    flex-direction: column;
+  } */
+`;
+
+const HeadshotWrapper = styled.div`
+  width: 10rem;
+
+  div {
+    border-radius: 50%;
+  }
+
+  /* @media only screen and (max-width: 769px) {
+    width: 15rem;
+  } */
+`;
+
+const MainText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+
+  @media screen and (max-width: 769px) {
+    font-size: 1rem;
+  }
+`;
+
+const MainTextList = styled.ul`
+  list-style: none;
+  display: flex;
+
+  & > *:not(:first-child) {
+    margin-left: 1rem;
+  }
+`;
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <Layout>
         <section className="section">
-          <div className="container">
-            <div className="content">
+          <MainContainer>
+            <HeadshotWrapper>
+              <Headshot />
+            </HeadshotWrapper>
+            <MainText>
               <h1 className="has-text-weight-bold is-size-2">Learning Enthusiast</h1>
-            </div>
-            <div className="content">
-              <ul className="taglist">
+            
+              <MainTextList>
                 <li>Developer.</li>
                 <li>Designer.</li>
                 <li>Woodworker.</li>
                 <li>Musician.</li>
                 <li>Grillmaster.</li>
-              </ul>
-            </div>
+              </MainTextList>
+            </MainText>
             
-          </div>
+          </MainContainer>
         </section>
       </Layout>
     )
